@@ -10,6 +10,6 @@ class Addexpense extends StatefulWidget {
 class _AddexpenseState extends State<Addexpense> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Text("Add Expense");
   }
 }

@@ -1,5 +1,13 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/views/dashboard.dart';
+import 'package:flutter_application_1/views/addExpense.dart';
+import 'package:flutter_application_1/views/expenseDetails.dart';
+import 'package:flutter_application_1/views/home.dart' as body;
+import 'package:flutter_application_1/views/summaryExpenses.dart';
+
+var screens = [Dashboard(), Addexpense(), Expensedetails(), ExpenseSummary()];
+int position = 0;
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -15,14 +23,20 @@ class _HomeScreenState extends State<HomeScreen> {
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.blueAccent,
         items: <Widget>[
+          Icon(Icons.home, size: 30),
           Icon(Icons.add, size: 30),
           Icon(Icons.list, size: 30),
           Icon(Icons.search, size: 30),
         ],
         onTap: (index) {
+          setState(() {
+            position = index;
+          });
+
           //Handle button tap
         },
       ),
+      body: body.screens[position],
     );
   }
 }
