@@ -3,17 +3,17 @@ import 'package:flutter_application_1/configs/routes.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() {
-  runApp(GradingApp());
+  runApp(ExpenseTrackerApp());
 }
 
-class GradingApp extends StatefulWidget {
-  const GradingApp({super.key});
+class ExpenseTrackerApp extends StatefulWidget {
+  const ExpenseTrackerApp({super.key});
 
   @override
-  State<GradingApp> createState() => _GradingAppState();
+  State<ExpenseTrackerApp> createState() => _ExpenseTrackerAppState();
 }
 
-class _GradingAppState extends State<GradingApp> {
+class _ExpenseTrackerAppState extends State<ExpenseTrackerApp> {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(

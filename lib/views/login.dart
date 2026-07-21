@@ -14,7 +14,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Grading Application"),
+        title: Text("Expense Tracker Application"),
         backgroundColor: primaryColor,
         foregroundColor: Colors.white,
         centerTitle: true,
@@ -31,11 +31,11 @@ class _LoginScreenState extends State<LoginScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset("assets/logo.png", width: 200, height: 200),
+                Image.asset("assets/logo.png", width: 400, height: 400),
               ],
             ),
             Text(
-              "Username:",
+              "Email Address:",
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
@@ -73,9 +73,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     Get.offNamed('/home');
                   },
                   color: primaryColor,
-                  child: Text("Login", style: TextStyle(color: Colors.white)),
                   height: 50,
                   minWidth: 200,
+                  child: Text("Login", style: TextStyle(color: Colors.white)),
                 ),
               ],
             ),
